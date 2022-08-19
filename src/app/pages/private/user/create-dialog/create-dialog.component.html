@@ -23,7 +23,7 @@
                                             matInput
                                             maxlength="15"
                                             class="appearance-none block w-full"
-                                            id="grid-first-name" type="text" placeholder="Deivid" formControlName="name">
+                                            id="grid-first-name" type="text" placeholder="Nombre" formControlName="name">
                                         <mat-error *ngFor="let validation of validations.name">
                                             <mat-error *ngIf="newUserFormGroup.get('name')?.hasError(validation.type) && (newUserFormGroup.get('name')?.dirty || newUserFormGroup.get('name')?.touched)"
                                                 class="text-red-500 text-xs italic">
@@ -41,7 +41,7 @@
                                             matInput
                                             maxlength="15"
                                             class="appearance-none block w-full"
-                                            id="grid-first-name" type="text" placeholder="DeividClar" formControlName="username">
+                                            id="grid-first-name" type="text" placeholder="Nombre de usuario" formControlName="username">
                                         <mat-error *ngFor="let validation of validations.username">
                                             <mat-error *ngIf="newUserFormGroup.get('username')?.hasError(validation.type) && (newUserFormGroup.get('username')?.dirty || newUserFormGroup.get('username')?.touched)"
                                                 class="text-red-500 text-xs italic">
@@ -61,7 +61,7 @@
                                             matInput
                                             maxlength="30"
                                             class="appearance-none block w-full"
-                                            id="grid-first-name" type="text" placeholder="deividclar@gmail.com" formControlName="email">
+                                            id="grid-first-name" type="text" placeholder="ejemplo@correo.com" formControlName="email">
                                         <mat-error *ngFor="let validation of validations.email">
                                             <mat-error *ngIf="newUserFormGroup.get('email')?.hasError(validation.type) && (newUserFormGroup.get('email')?.dirty || newUserFormGroup.get('email')?.touched)"
                                                 class="text-red-500 text-xs italic">
