@@ -99,7 +99,7 @@
                                             matInput
                                             maxlength="30"
                                             class="appearance-none block w-full"
-                                            id="grid-first-name" type="text" placeholder="https://github.com/stevenclar" formControlName="website">
+                                            id="grid-first-name" type="text" placeholder="https://github.com/" formControlName="website">
                                         <mat-error *ngFor="let validation of validations.website">
                                             <mat-error *ngIf="newUserFormGroup.get('website')?.hasError(validation.type) && (newUserFormGroup.get('website')?.dirty || newUserFormGroup.get('website')?.touched)"
                                                 class="text-red-500 text-xs italic">
