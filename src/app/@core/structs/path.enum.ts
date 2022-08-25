@@ -14,4 +14,9 @@ export enum Path {
   Users = 'users',
   UsersOverview = 'overview',
   UsersProfile = ':username',
+
+  // Employee
+  Employees = 'employees',
+  EmployeesOverview = 'overview',
+  EmployeesProfile = ':username',
 }
