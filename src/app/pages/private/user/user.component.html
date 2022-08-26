@@ -52,24 +52,25 @@
                             </th>
                             <th
                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 dark:bg-gray-500 text-left text-xs font-semibold uppercase tracking-wider">
-                                Correo electrónico
+                                apellido
                             </th>
                             <th
                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 dark:bg-gray-500 text-left text-xs font-semibold uppercase tracking-wider">
-                                Teléfono
+                                EMAIL
                             </th>
                             <th
                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 dark:bg-gray-500 text-left text-xs font-semibold uppercase tracking-wider">
-                                Sitio Web
+                                TELEFONO
                             </th>
                             <th
                                 class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 dark:bg-gray-500 text-left text-xs font-semibold uppercase tracking-wider">
-                                Opciones
+                                OPCIONES
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let user of users">
+                            <!--la data temporal es tomada con relación a la API: https://jsonplaceholder.typicode.com/users-->
                             <td class="px-5 py-5 border-b border-gray-200 bg-white dark:bg-gray-600 text-sm">
                                 <p class="whitespace-no-wrap">{{user.username | titlecase}}</p>
                             </td>
@@ -77,25 +78,25 @@
                                 <p class="whitespace-no-wrap">{{user.name | titlecase}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white dark:bg-gray-600 text-sm">
-                                <p class="whitespace-no-wrap">{{user.email | lowercase}}</p>
+                                <p class="whitespace-no-wrap">{{user.name | lowercase}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white dark:bg-gray-600 text-sm">
-                                <p class="whitespace-no-wrap">{{user.phone}}</p>
+                                <p class="whitespace-no-wrap">{{user.email}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white dark:bg-gray-600 text-sm">
                                 <p class="whitespace-no-wrap">
-                                    {{user.website | lowercase}}
+                                    {{user.phone | lowercase}}
                                 </p>
                             </td>
                             <td class="flex px-5 py-5 border-b border-gray-200 bg-white dark:bg-gray-600 gap-3">
                                 <button (click)="openEditDialog(user)"
-                                    class="flex-1 self-center p-2 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100">
+                                    class="flex-1 self-center p-2 bg-blue-500 rounded-lg shadow-xs cursor-pointer hover:bg-blue-600 hover:text-gray-100">
                                     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
                                     </svg>
                                 </button>
                                 <button (click)="openDeleteDialog(user)"
-                                    class="flex-1 self-center p-2 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100 m-0">
+                                    class="flex-1 self-center p-2 bg-red-500 rounded-lg shadow-xs cursor-pointer hover:bg-red-600 hover:text-gray-100 m-0">
                                     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path
                                             d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
