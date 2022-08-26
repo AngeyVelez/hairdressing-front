@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthGuard } from '@core/guards';
 import { Path } from '@core/structs';
 
+
 export const PRIVATE_ROUTES: Routes = [
   {
     path: '',
@@ -25,11 +26,19 @@ export const PRIVATE_ROUTES: Routes = [
       ),
   },
   {
+    path: Path.Services,
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('@app/pages/private/servicios/servicios.module').then(
+        (m) => m.ServiceModule,
+      ),
+  },
+  {
     path: Path.Employees,
     canActivate: [AuthGuard],
     loadChildren: () =>
       import('@app/pages/private/employees/employee.module').then(
         (m) => m.EmployeeModule,
       ),
-  },
+  }
 ];
