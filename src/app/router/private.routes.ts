@@ -33,5 +33,12 @@ export const PRIVATE_ROUTES: Routes = [
         (m) => m.ServiceModule,
       ),
   },
-
+  {
+    path: Path.Employees,
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('@app/pages/private/employees/employee.module').then(
+        (m) => m.EmployeeModule,
+      ),
+  }
 ];

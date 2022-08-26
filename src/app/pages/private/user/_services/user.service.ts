@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
@@ -5,8 +6,13 @@ import { environment } from '@environments/environment';
 export interface User {
   id: number,
   name: string,
+  lastname: string,
   username: string,
+  date: Time,
   email: string,
+  gender: string,
+  image: string,
+  password: string,
   address?: {
     street: string,
     suite: string,
