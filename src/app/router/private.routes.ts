@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthGuard } from '@core/guards';
 import { Path } from '@core/structs';
 
+
 export const PRIVATE_ROUTES: Routes = [
   {
     path: '',
@@ -24,4 +25,13 @@ export const PRIVATE_ROUTES: Routes = [
         (m) => m.UserModule,
       ),
   },
+  {
+    path: Path.Services,
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('@app/pages/private/servicios/servicios.module').then(
+        (m) => m.ServiceModule,
+      ),
+  },
+
 ];
