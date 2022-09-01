@@ -1,9 +1,66 @@
-<div class="container flex flex-col items-center justify-center h-full">
-  <p class="my-12 text-5xl text-center">¡No te encuentras logueado!</p>
-  <button
-    class="inline-block h-12 px-6 py-3 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring-4 focus:ring-offset-blue-600 focus:outline-none"
-    (click)="onClickSignIn()"
-  >
-    Iniciar Sesión
-  </button>
-</div>
+<section class="h-screen">
+  <div class="container px-6 py-12 h-full">
+    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="w-full"
+          alt="Phone image" />
+      </div>
+      <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
+        <form>
+          <!-- Email input -->
+
+          <div class="mb-6">
+            <label class="form-check-label inline-block text-blue-600 font-semibold">Usuario</label>
+            <input type="text"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="ejemplo@email.com" id="email" />
+          </div>
+
+          <!-- Password input -->
+          <div class="mb-6">
+            <label class="form-check-label inline-block text-blue-600 font-semibold">Contraseña</label>
+            <input type="password"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="password" />
+          </div>
+
+          <div class="flex justify-between items-center mb-6">
+            <div class="form-group form-check">
+              <input type="checkbox"
+                class="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                id="exampleCheck3" />
+              <label class="form-check-label inline-block text-blue-600" for="exampleCheck2">Recordarme</label>
+            </div>
+            <a href="#!"
+              class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out">¿Olvidaste
+              tu contrase?</a>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit"
+            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+            (click)="onClickSignIn()" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            INGRESAR
+          </button>
+
+          <div
+            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5 ">
+            <hr class="sm md lg xl 2xl: w-full">
+            <p class="font-semibold text-blue-600">O</p>
+            <hr class="sm md lg xl 2xl: w-full">
+          </div>
+          <a class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+            style="background-color: lightcyan" href="#!" role="button" data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            <!-- Gmail -->
+
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42NCA5LjIwNWMwLS42MzktLjA1Ny0xLjI1Mi0uMTY0LTEuODQxSDl2My40ODFoNC44NDRhNC4xNCA0LjE0IDAgMCAxLTEuNzk2IDIuNzE2djIuMjU5aDIuOTA4YzEuNzAyLTEuNTY3IDIuNjg0LTMuODc1IDIuNjg0LTYuNjE1eiIgZmlsbD0iIzQyODVGNCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+PHBhdGggZD0iTTkgMThjMi40MyAwIDQuNDY3LS44MDYgNS45NTYtMi4xOGwtMi45MDgtMi4yNTljLS44MDYuNTQtMS44MzcuODYtMy4wNDguODYtMi4zNDQgMC00LjMyOC0xLjU4NC01LjAzNi0zLjcxMUguOTU3djIuMzMyQTguOTk3IDguOTk3IDAgMCAwIDkgMTh6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD48cGF0aCBkPSJNMy45NjQgMTAuNzFBNS40MSA1LjQxIDAgMCAxIDMuNjgyIDljMC0uNTkzLjEwMi0xLjE3LjI4Mi0xLjcxVjQuOTU4SC45NTdBOC45OTYgOC45OTYgMCAwIDAgMCA5YzAgMS40NTIuMzQ4IDIuODI3Ljk1NyA0LjA0MmwzLjAwNy0yLjMzMnoiIGZpbGw9IiNGQkJDMDUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik05IDMuNThjMS4zMjEgMCAyLjUwOC40NTQgMy40NCAxLjM0NWwyLjU4Mi0yLjU4QzEzLjQ2My44OTEgMTEuNDI2IDAgOSAwQTguOTk3IDguOTk3IDAgMCAwIC45NTcgNC45NThMMy45NjQgNy4yOUM0LjY3MiA1LjE2MyA2LjY1NiAzLjU4IDkgMy41OHoiIGZpbGw9IiNFQTQzMzUiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiPjwvcGF0aD48L2c+PC9zdmc+"
+              height="20" width="20" class="mx-2">
+            <p class="text-blue-500"> Continuar con Gmail</p>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
