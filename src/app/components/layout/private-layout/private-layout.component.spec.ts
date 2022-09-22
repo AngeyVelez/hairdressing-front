@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SidebarModule } from '@app/components/sidebar/sidebar.module';
 import { HeaderModule } from '../../header/header.module';
+import { FooterModule } from '../../footer/footer.module';
 import { PrivateLayoutComponent } from './layout.component';
 
 describe('PrivateLayoutComponent', () => {
@@ -11,7 +12,7 @@ describe('PrivateLayoutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PrivateLayoutComponent],
-      imports: [RouterTestingModule, HeaderModule, SidebarModule],
+      imports: [RouterTestingModule, HeaderModule, SidebarModule, FooterModule],
     }).compileComponents();
   });
 
