@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderModule } from '../../header/header.module';
+import { FooterModule } from '../../footer/footer.module';
 import { PublicLayoutComponent } from './public-layout.component';
 
 describe('PublicLayoutComponent', () => {
@@ -10,7 +11,7 @@ describe('PublicLayoutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PublicLayoutComponent],
-      imports: [RouterTestingModule, HeaderModule],
+      imports: [RouterTestingModule, HeaderModule, FooterModule],
     }).compileComponents();
   });
 

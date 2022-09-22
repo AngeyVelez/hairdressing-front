@@ -54,4 +54,6 @@ export class EmployeeService {
   deleteEmployee (employeeId: number) {
     return this.http.delete<Employee>(`${this.WEB_URL}/users/${employeeId}`);
   }
+
 }
+
